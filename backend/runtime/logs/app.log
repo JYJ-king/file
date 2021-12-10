@@ -1,0 +1,1414 @@
+2021-12-09 16:15:14 [127.0.0.1][-][khvb3b4k554qbqu2iijlr1raj5][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The table does not exist: {{%user}} in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\ActiveRecord.php:438
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#1 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#2 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#3 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#4 D:\phpstudy_pro\WWW\advanced\common\models\User.php(85): yii\db\BaseActiveRecord::findOne(Array)
+#5 D:\phpstudy_pro\WWW\advanced\common\models\LoginForm.php(73): common\models\User::findByUsername('admin')
+#6 D:\phpstudy_pro\WWW\advanced\common\models\LoginForm.php(44): common\models\LoginForm->getUser()
+#7 [internal function]: common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator))
+#8 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\validators\InlineValidator.php(72): call_user_func(Array, 'password', NULL, Object(yii\validators\InlineValidator))
+#9 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\validators\Validator.php(257): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#10 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#11 D:\phpstudy_pro\WWW\advanced\common\models\LoginForm.php(58): yii\base\Model->validate()
+#12 D:\phpstudy_pro\WWW\advanced\backend\controllers\SiteController.php(78): common\models\LoginForm->login()
+#13 [internal function]: backend\controllers\SiteController->actionLogin()
+#14 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#15 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#16 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#17 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/login', Array)
+#18 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 D:\phpstudy_pro\WWW\advanced\backend\web\index.php(17): yii\base\Application->run()
+#20 {main}
+2021-12-09 16:15:14 [127.0.0.1][-][khvb3b4k554qbqu2iijlr1raj5][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf-backend' => 'NCedXql62GakjIKLcOnR-3WsqPVJ6fnM7TueJHCSgvEDCuo6_TO5MsrO2_sTh5a2MMLRxT-GzrqCDvZAHPO7pg=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'themeName' => 'blue'
+    'advanced-backend' => 'khvb3b4k554qbqu2iijlr1raj5'
+    '_csrf-backend' => '952ae805048c84337b56488a300aa132117e7f0be67a611723002bd3fb25ff72a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"7-wdTIaTnBYpcnGMEny0vo7vo5hdla9W\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://127.0.0.1/advanced/backend/web/index.php'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\root\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-J9D5JK1'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'GOPATH' => 'D:\\Goproject'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\root'
+    'LOCALAPPDATA' => 'C:\\Users\\root\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-J9D5JK1'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OneDrive' => 'C:\\Users\\root\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'D:\\Program Files (x86)\\NetSarang\\Xshell 6\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\Program Files\\TortoiseSVN\\bin;D:\\phpstudy_pro\\Extensions\\php\\php7.3.4nts;D:\\Program Files (x86)\\NetSarang\\Xftp 7\\;D:\\Program Files\\Git\\cmd;D:\\Program Files\\Go\\bin;D:\\Program Files (x86)\\NetSarang\\Xshell7\\;C:\\Users\\root\\AppData\\Local\\Microsoft\\WindowsApps;D:\\office\\Microsoft VS Code\\bin;C:\\Program Files\\JetBrains\\PhpStorm 2020.2.4\\bin;C:\\Users\\root\\go\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PhpStorm' => 'C:\\Program Files\\JetBrains\\PhpStorm 2020.2.4\\bin;'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 11, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e0b'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\root\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\root\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-J9D5JK1'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-J9D5JK1'
+    'USERNAME' => 'root'
+    'USERPROFILE' => 'C:\\Users\\root'
+    'windir' => 'C:\\WINDOWS'
+    'WXDRIVE_START_ARGS' => '--wxdrive-setting=0 --disable-gpu --disable-software-rasterizer --enable-features=NetworkServiceInProcess'
+    'ZES_ENABLE_SYSMAN' => '1'
+    'HTTP_COOKIE' => 'themeName=blue; advanced-backend=khvb3b4k554qbqu2iijlr1raj5; _csrf-backend=952ae805048c84337b56488a300aa132117e7f0be67a611723002bd3fb25ff72a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%227-wdTIaTnBYpcnGMEny0vo7vo5hdla9W%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/advanced/backend/web/index.php?r=site%2Flogin'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ORIGIN' => 'http://127.0.0.1'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"96\", \"Google Chrome\";v=\"96\"'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONTENT_LENGTH' => '236'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '61603'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.15.11'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpstudy_pro/WWW'
+    'DOCUMENT_URI' => '/advanced/backend/web/index.php'
+    'REQUEST_URI' => '/advanced/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/advanced/backend/web/index.php'
+    'CONTENT_LENGTH' => '236'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'PATH_TRANSLATED' => 'D:/phpstudy_pro/WWW'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => 'D:/phpstudy_pro/WWW/advanced/backend/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639037714.268
+    'REQUEST_TIME' => 1639037714
+]
+2021-12-09 16:24:45 [127.0.0.1][-][khvb3b4k554qbqu2iijlr1raj5][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Unable to verify your data submission. in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\web\Controller.php:187
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#1 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#2 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/login', Array)
+#3 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 D:\phpstudy_pro\WWW\advanced\backend\web\index.php(17): yii\base\Application->run()
+#5 {main}
+2021-12-09 16:24:45 [127.0.0.1][-][khvb3b4k554qbqu2iijlr1raj5][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf-backend' => 'Pl0A5phjIbFlfVUAzBd46uDlmeF34sOzkRXotTSSmm0JcHeCzCpA5Qs_DHCveT-npYvg0QGN9MX-IIDRWPOjOg=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'themeName' => 'blue'
+    'advanced-backend' => 'khvb3b4k554qbqu2iijlr1raj5'
+    '_csrf-backend' => '952ae805048c84337b56488a300aa132117e7f0be67a611723002bd3fb25ff72a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"7-wdTIaTnBYpcnGMEny0vo7vo5hdla9W\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://127.0.0.1/advanced/backend/web/index.php'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\root\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-J9D5JK1'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'GOPATH' => 'D:\\Goproject'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\root'
+    'LOCALAPPDATA' => 'C:\\Users\\root\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-J9D5JK1'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OneDrive' => 'C:\\Users\\root\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'D:\\Program Files (x86)\\NetSarang\\Xshell 6\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\Program Files\\TortoiseSVN\\bin;D:\\phpstudy_pro\\Extensions\\php\\php7.3.4nts;D:\\Program Files (x86)\\NetSarang\\Xftp 7\\;D:\\Program Files\\Git\\cmd;D:\\Program Files\\Go\\bin;D:\\Program Files (x86)\\NetSarang\\Xshell7\\;C:\\Users\\root\\AppData\\Local\\Microsoft\\WindowsApps;D:\\office\\Microsoft VS Code\\bin;C:\\Program Files\\JetBrains\\PhpStorm 2020.2.4\\bin;C:\\Users\\root\\go\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PhpStorm' => 'C:\\Program Files\\JetBrains\\PhpStorm 2020.2.4\\bin;'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 11, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e0b'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\root\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\root\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-J9D5JK1'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-J9D5JK1'
+    'USERNAME' => 'root'
+    'USERPROFILE' => 'C:\\Users\\root'
+    'windir' => 'C:\\WINDOWS'
+    'WXDRIVE_START_ARGS' => '--wxdrive-setting=0 --disable-gpu --disable-software-rasterizer --enable-features=NetworkServiceInProcess'
+    'ZES_ENABLE_SYSMAN' => '1'
+    'HTTP_COOKIE' => 'themeName=blue; advanced-backend=khvb3b4k554qbqu2iijlr1raj5; _csrf-backend=952ae805048c84337b56488a300aa132117e7f0be67a611723002bd3fb25ff72a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%227-wdTIaTnBYpcnGMEny0vo7vo5hdla9W%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/advanced/backend/web/index.php?r=site%2Flogin'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ORIGIN' => 'http://127.0.0.1'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"96\", \"Google Chrome\";v=\"96\"'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONTENT_LENGTH' => '236'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '62482'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.15.11'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpstudy_pro/WWW'
+    'DOCUMENT_URI' => '/advanced/backend/web/index.php'
+    'REQUEST_URI' => '/advanced/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/advanced/backend/web/index.php'
+    'CONTENT_LENGTH' => '236'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'PATH_TRANSLATED' => 'D:/phpstudy_pro/WWW'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => 'D:/phpstudy_pro/WWW/advanced/backend/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639038284.8106
+    'REQUEST_TIME' => 1639038284
+]
+2021-12-09 23:18:29 [127.0.0.1][-][b4bq3i3hadtl3uclpdqs6pr5pf][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "fileupload/list". in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('fileupload/list', Array)
+#1 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpstudy_pro\WWW\advanced\backend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\phpstudy_pro\WWW\advanced\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2021-12-09 23:18:29 [127.0.0.1][-][b4bq3i3hadtl3uclpdqs6pr5pf][info][application] $_GET = [
+    'r' => 'fileupload/list'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'themeName' => 'blue'
+    'advanced-backend' => 'b4bq3i3hadtl3uclpdqs6pr5pf'
+    '_csrf-backend' => 'a41b633e314e46052a9081fd98d7296bd1767ee90a2fd446cacb87211a1bf8faa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"cfQtmYkoWKKB8KAesv3AgQ42gJpEKllS\";}'
+    '_csrf' => 'b78b293f3b5325538490d993f6465b26063e09a02631ecdd9270ed5493937287a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eQs0sSzuqiKEUhQHmNQod-TXJqOvRCNU\";}'
+    'PHPSESSID' => 'tjt4cc8bhq0of0064tch7ih2ao'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://127.0.0.1/advanced/backend/web/index.php'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\root\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-J9D5JK1'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'GOPATH' => 'D:\\Goproject'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\root'
+    'LOCALAPPDATA' => 'C:\\Users\\root\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-J9D5JK1'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OneDrive' => 'C:\\Users\\root\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'D:\\Program Files (x86)\\NetSarang\\Xshell 6\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\Program Files\\TortoiseSVN\\bin;D:\\phpstudy_pro\\Extensions\\php\\php7.3.4nts;D:\\Program Files (x86)\\NetSarang\\Xftp 7\\;D:\\Program Files\\Git\\cmd;D:\\Program Files\\Go\\bin;D:\\Program Files (x86)\\NetSarang\\Xshell7\\;C:\\Users\\root\\AppData\\Local\\Microsoft\\WindowsApps;D:\\office\\Microsoft VS Code\\bin;C:\\Program Files\\JetBrains\\PhpStorm 2020.2.4\\bin;C:\\Users\\root\\go\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PhpStorm' => 'C:\\Program Files\\JetBrains\\PhpStorm 2020.2.4\\bin;'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 11, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e0b'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\root\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\root\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-J9D5JK1'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-J9D5JK1'
+    'USERNAME' => 'root'
+    'USERPROFILE' => 'C:\\Users\\root'
+    'windir' => 'C:\\WINDOWS'
+    'WXDRIVE_START_ARGS' => '--wxdrive-setting=0 --disable-gpu --disable-software-rasterizer --enable-features=NetworkServiceInProcess'
+    'ZES_ENABLE_SYSMAN' => '1'
+    'HTTP_COOKIE' => 'themeName=blue; advanced-backend=b4bq3i3hadtl3uclpdqs6pr5pf; _csrf-backend=a41b633e314e46052a9081fd98d7296bd1767ee90a2fd446cacb87211a1bf8faa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22cfQtmYkoWKKB8KAesv3AgQ42gJpEKllS%22%3B%7D; _csrf=b78b293f3b5325538490d993f6465b26063e09a02631ecdd9270ed5493937287a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eQs0sSzuqiKEUhQHmNQod-TXJqOvRCNU%22%3B%7D; PHPSESSID=tjt4cc8bhq0of0064tch7ih2ao'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"96\", \"Google Chrome\";v=\"96\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '64561'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.15.11'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpstudy_pro/WWW'
+    'DOCUMENT_URI' => '/advanced/backend/web/index.php'
+    'REQUEST_URI' => '/advanced/backend/web/index.php?r=fileupload/list'
+    'SCRIPT_NAME' => '/advanced/backend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=fileupload/list'
+    'PATH_TRANSLATED' => 'D:/phpstudy_pro/WWW'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => 'D:/phpstudy_pro/WWW/advanced/backend/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639063109.5066
+    'REQUEST_TIME' => 1639063109
+]
+2021-12-09 23:20:02 [127.0.0.1][-][b4bq3i3hadtl3uclpdqs6pr5pf][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "file\list". in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('file\\list', Array)
+#1 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpstudy_pro\WWW\advanced\backend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\phpstudy_pro\WWW\advanced\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2021-12-09 23:20:01 [127.0.0.1][-][b4bq3i3hadtl3uclpdqs6pr5pf][info][application] $_GET = [
+    'r' => 'file\\list'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'themeName' => 'blue'
+    'advanced-backend' => 'b4bq3i3hadtl3uclpdqs6pr5pf'
+    '_csrf-backend' => 'a41b633e314e46052a9081fd98d7296bd1767ee90a2fd446cacb87211a1bf8faa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"cfQtmYkoWKKB8KAesv3AgQ42gJpEKllS\";}'
+    '_csrf' => 'b78b293f3b5325538490d993f6465b26063e09a02631ecdd9270ed5493937287a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eQs0sSzuqiKEUhQHmNQod-TXJqOvRCNU\";}'
+    'PHPSESSID' => 'tjt4cc8bhq0of0064tch7ih2ao'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://127.0.0.1/advanced/backend/web/index.php?r=site%2Findex'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\root\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-J9D5JK1'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'GOPATH' => 'D:\\Goproject'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\root'
+    'LOCALAPPDATA' => 'C:\\Users\\root\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-J9D5JK1'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OneDrive' => 'C:\\Users\\root\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'D:\\Program Files (x86)\\NetSarang\\Xshell 6\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\Program Files\\TortoiseSVN\\bin;D:\\phpstudy_pro\\Extensions\\php\\php7.3.4nts;D:\\Program Files (x86)\\NetSarang\\Xftp 7\\;D:\\Program Files\\Git\\cmd;D:\\Program Files\\Go\\bin;D:\\Program Files (x86)\\NetSarang\\Xshell7\\;C:\\Users\\root\\AppData\\Local\\Microsoft\\WindowsApps;D:\\office\\Microsoft VS Code\\bin;C:\\Program Files\\JetBrains\\PhpStorm 2020.2.4\\bin;C:\\Users\\root\\go\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PhpStorm' => 'C:\\Program Files\\JetBrains\\PhpStorm 2020.2.4\\bin;'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 11, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e0b'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\root\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\root\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-J9D5JK1'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-J9D5JK1'
+    'USERNAME' => 'root'
+    'USERPROFILE' => 'C:\\Users\\root'
+    'windir' => 'C:\\WINDOWS'
+    'WXDRIVE_START_ARGS' => '--wxdrive-setting=0 --disable-gpu --disable-software-rasterizer --enable-features=NetworkServiceInProcess'
+    'ZES_ENABLE_SYSMAN' => '1'
+    'HTTP_COOKIE' => 'themeName=blue; advanced-backend=b4bq3i3hadtl3uclpdqs6pr5pf; _csrf-backend=a41b633e314e46052a9081fd98d7296bd1767ee90a2fd446cacb87211a1bf8faa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22cfQtmYkoWKKB8KAesv3AgQ42gJpEKllS%22%3B%7D; _csrf=b78b293f3b5325538490d993f6465b26063e09a02631ecdd9270ed5493937287a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eQs0sSzuqiKEUhQHmNQod-TXJqOvRCNU%22%3B%7D; PHPSESSID=tjt4cc8bhq0of0064tch7ih2ao'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"96\", \"Google Chrome\";v=\"96\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '64562'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.15.11'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpstudy_pro/WWW'
+    'DOCUMENT_URI' => '/advanced/backend/web/index.php'
+    'REQUEST_URI' => '/advanced/backend/web/index.php?r=file\\list'
+    'SCRIPT_NAME' => '/advanced/backend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=file\\list'
+    'PATH_TRANSLATED' => 'D:/phpstudy_pro/WWW'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => 'D:/phpstudy_pro/WWW/advanced/backend/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639063201.7695
+    'REQUEST_TIME' => 1639063201
+]
+2021-12-09 23:20:34 [127.0.0.1][-][b4bq3i3hadtl3uclpdqs6pr5pf][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "fileupload\list". in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('fileupload\\list', Array)
+#1 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpstudy_pro\WWW\advanced\backend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\phpstudy_pro\WWW\advanced\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2021-12-09 23:20:33 [127.0.0.1][-][b4bq3i3hadtl3uclpdqs6pr5pf][info][application] $_GET = [
+    'r' => 'fileupload\\list'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'themeName' => 'blue'
+    'advanced-backend' => 'b4bq3i3hadtl3uclpdqs6pr5pf'
+    '_csrf-backend' => 'a41b633e314e46052a9081fd98d7296bd1767ee90a2fd446cacb87211a1bf8faa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"cfQtmYkoWKKB8KAesv3AgQ42gJpEKllS\";}'
+    '_csrf' => 'b78b293f3b5325538490d993f6465b26063e09a02631ecdd9270ed5493937287a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eQs0sSzuqiKEUhQHmNQod-TXJqOvRCNU\";}'
+    'PHPSESSID' => 'tjt4cc8bhq0of0064tch7ih2ao'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://127.0.0.1/advanced/backend/web/index.php?r=site%2Findex'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\root\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-J9D5JK1'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'GOPATH' => 'D:\\Goproject'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\root'
+    'LOCALAPPDATA' => 'C:\\Users\\root\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-J9D5JK1'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OneDrive' => 'C:\\Users\\root\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'D:\\Program Files (x86)\\NetSarang\\Xshell 6\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\Program Files\\TortoiseSVN\\bin;D:\\phpstudy_pro\\Extensions\\php\\php7.3.4nts;D:\\Program Files (x86)\\NetSarang\\Xftp 7\\;D:\\Program Files\\Git\\cmd;D:\\Program Files\\Go\\bin;D:\\Program Files (x86)\\NetSarang\\Xshell7\\;C:\\Users\\root\\AppData\\Local\\Microsoft\\WindowsApps;D:\\office\\Microsoft VS Code\\bin;C:\\Program Files\\JetBrains\\PhpStorm 2020.2.4\\bin;C:\\Users\\root\\go\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PhpStorm' => 'C:\\Program Files\\JetBrains\\PhpStorm 2020.2.4\\bin;'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 11, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e0b'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\root\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\root\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-J9D5JK1'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-J9D5JK1'
+    'USERNAME' => 'root'
+    'USERPROFILE' => 'C:\\Users\\root'
+    'windir' => 'C:\\WINDOWS'
+    'WXDRIVE_START_ARGS' => '--wxdrive-setting=0 --disable-gpu --disable-software-rasterizer --enable-features=NetworkServiceInProcess'
+    'ZES_ENABLE_SYSMAN' => '1'
+    'HTTP_COOKIE' => 'themeName=blue; advanced-backend=b4bq3i3hadtl3uclpdqs6pr5pf; _csrf-backend=a41b633e314e46052a9081fd98d7296bd1767ee90a2fd446cacb87211a1bf8faa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22cfQtmYkoWKKB8KAesv3AgQ42gJpEKllS%22%3B%7D; _csrf=b78b293f3b5325538490d993f6465b26063e09a02631ecdd9270ed5493937287a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eQs0sSzuqiKEUhQHmNQod-TXJqOvRCNU%22%3B%7D; PHPSESSID=tjt4cc8bhq0of0064tch7ih2ao'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"96\", \"Google Chrome\";v=\"96\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '64562'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.15.11'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpstudy_pro/WWW'
+    'DOCUMENT_URI' => '/advanced/backend/web/index.php'
+    'REQUEST_URI' => '/advanced/backend/web/index.php?r=fileupload\\list'
+    'SCRIPT_NAME' => '/advanced/backend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=fileupload\\list'
+    'PATH_TRANSLATED' => 'D:/phpstudy_pro/WWW'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => 'D:/phpstudy_pro/WWW/advanced/backend/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639063233.5664
+    'REQUEST_TIME' => 1639063233
+]
+2021-12-09 23:21:04 [127.0.0.1][-][b4bq3i3hadtl3uclpdqs6pr5pf][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site\list". in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site\\list', Array)
+#1 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpstudy_pro\WWW\advanced\backend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\phpstudy_pro\WWW\advanced\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2021-12-09 23:21:04 [127.0.0.1][-][b4bq3i3hadtl3uclpdqs6pr5pf][info][application] $_GET = [
+    'r' => 'site\\list'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'themeName' => 'blue'
+    'advanced-backend' => 'b4bq3i3hadtl3uclpdqs6pr5pf'
+    '_csrf-backend' => 'a41b633e314e46052a9081fd98d7296bd1767ee90a2fd446cacb87211a1bf8faa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"cfQtmYkoWKKB8KAesv3AgQ42gJpEKllS\";}'
+    '_csrf' => 'b78b293f3b5325538490d993f6465b26063e09a02631ecdd9270ed5493937287a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eQs0sSzuqiKEUhQHmNQod-TXJqOvRCNU\";}'
+    'PHPSESSID' => 'tjt4cc8bhq0of0064tch7ih2ao'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://127.0.0.1/advanced/backend/web/index.php?r=site%2Findex'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\root\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-J9D5JK1'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'GOPATH' => 'D:\\Goproject'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\root'
+    'LOCALAPPDATA' => 'C:\\Users\\root\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-J9D5JK1'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OneDrive' => 'C:\\Users\\root\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'D:\\Program Files (x86)\\NetSarang\\Xshell 6\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\Program Files\\TortoiseSVN\\bin;D:\\phpstudy_pro\\Extensions\\php\\php7.3.4nts;D:\\Program Files (x86)\\NetSarang\\Xftp 7\\;D:\\Program Files\\Git\\cmd;D:\\Program Files\\Go\\bin;D:\\Program Files (x86)\\NetSarang\\Xshell7\\;C:\\Users\\root\\AppData\\Local\\Microsoft\\WindowsApps;D:\\office\\Microsoft VS Code\\bin;C:\\Program Files\\JetBrains\\PhpStorm 2020.2.4\\bin;C:\\Users\\root\\go\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PhpStorm' => 'C:\\Program Files\\JetBrains\\PhpStorm 2020.2.4\\bin;'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 11, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e0b'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\root\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\root\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-J9D5JK1'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-J9D5JK1'
+    'USERNAME' => 'root'
+    'USERPROFILE' => 'C:\\Users\\root'
+    'windir' => 'C:\\WINDOWS'
+    'WXDRIVE_START_ARGS' => '--wxdrive-setting=0 --disable-gpu --disable-software-rasterizer --enable-features=NetworkServiceInProcess'
+    'ZES_ENABLE_SYSMAN' => '1'
+    'HTTP_COOKIE' => 'themeName=blue; advanced-backend=b4bq3i3hadtl3uclpdqs6pr5pf; _csrf-backend=a41b633e314e46052a9081fd98d7296bd1767ee90a2fd446cacb87211a1bf8faa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22cfQtmYkoWKKB8KAesv3AgQ42gJpEKllS%22%3B%7D; _csrf=b78b293f3b5325538490d993f6465b26063e09a02631ecdd9270ed5493937287a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eQs0sSzuqiKEUhQHmNQod-TXJqOvRCNU%22%3B%7D; PHPSESSID=tjt4cc8bhq0of0064tch7ih2ao'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"96\", \"Google Chrome\";v=\"96\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '64562'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.15.11'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpstudy_pro/WWW'
+    'DOCUMENT_URI' => '/advanced/backend/web/index.php'
+    'REQUEST_URI' => '/advanced/backend/web/index.php?r=site\\list'
+    'SCRIPT_NAME' => '/advanced/backend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site\\list'
+    'PATH_TRANSLATED' => 'D:/phpstudy_pro/WWW'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => 'D:/phpstudy_pro/WWW/advanced/backend/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639063263.9897
+    'REQUEST_TIME' => 1639063263
+]
+2021-12-09 23:21:08 [127.0.0.1][-][b4bq3i3hadtl3uclpdqs6pr5pf][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site\upload". in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site\\upload', Array)
+#1 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpstudy_pro\WWW\advanced\backend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\phpstudy_pro\WWW\advanced\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2021-12-09 23:21:08 [127.0.0.1][-][b4bq3i3hadtl3uclpdqs6pr5pf][info][application] $_GET = [
+    'r' => 'site\\upload'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'themeName' => 'blue'
+    'advanced-backend' => 'b4bq3i3hadtl3uclpdqs6pr5pf'
+    '_csrf-backend' => 'a41b633e314e46052a9081fd98d7296bd1767ee90a2fd446cacb87211a1bf8faa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"cfQtmYkoWKKB8KAesv3AgQ42gJpEKllS\";}'
+    '_csrf' => 'b78b293f3b5325538490d993f6465b26063e09a02631ecdd9270ed5493937287a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eQs0sSzuqiKEUhQHmNQod-TXJqOvRCNU\";}'
+    'PHPSESSID' => 'tjt4cc8bhq0of0064tch7ih2ao'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://127.0.0.1/advanced/backend/web/index.php?r=site%2Findex'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\root\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-J9D5JK1'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'GOPATH' => 'D:\\Goproject'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\root'
+    'LOCALAPPDATA' => 'C:\\Users\\root\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-J9D5JK1'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OneDrive' => 'C:\\Users\\root\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'D:\\Program Files (x86)\\NetSarang\\Xshell 6\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\Program Files\\TortoiseSVN\\bin;D:\\phpstudy_pro\\Extensions\\php\\php7.3.4nts;D:\\Program Files (x86)\\NetSarang\\Xftp 7\\;D:\\Program Files\\Git\\cmd;D:\\Program Files\\Go\\bin;D:\\Program Files (x86)\\NetSarang\\Xshell7\\;C:\\Users\\root\\AppData\\Local\\Microsoft\\WindowsApps;D:\\office\\Microsoft VS Code\\bin;C:\\Program Files\\JetBrains\\PhpStorm 2020.2.4\\bin;C:\\Users\\root\\go\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PhpStorm' => 'C:\\Program Files\\JetBrains\\PhpStorm 2020.2.4\\bin;'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 11, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e0b'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\root\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\root\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-J9D5JK1'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-J9D5JK1'
+    'USERNAME' => 'root'
+    'USERPROFILE' => 'C:\\Users\\root'
+    'windir' => 'C:\\WINDOWS'
+    'WXDRIVE_START_ARGS' => '--wxdrive-setting=0 --disable-gpu --disable-software-rasterizer --enable-features=NetworkServiceInProcess'
+    'ZES_ENABLE_SYSMAN' => '1'
+    'HTTP_COOKIE' => 'themeName=blue; advanced-backend=b4bq3i3hadtl3uclpdqs6pr5pf; _csrf-backend=a41b633e314e46052a9081fd98d7296bd1767ee90a2fd446cacb87211a1bf8faa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22cfQtmYkoWKKB8KAesv3AgQ42gJpEKllS%22%3B%7D; _csrf=b78b293f3b5325538490d993f6465b26063e09a02631ecdd9270ed5493937287a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eQs0sSzuqiKEUhQHmNQod-TXJqOvRCNU%22%3B%7D; PHPSESSID=tjt4cc8bhq0of0064tch7ih2ao'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"96\", \"Google Chrome\";v=\"96\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '64562'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.15.11'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpstudy_pro/WWW'
+    'DOCUMENT_URI' => '/advanced/backend/web/index.php'
+    'REQUEST_URI' => '/advanced/backend/web/index.php?r=site\\upload'
+    'SCRIPT_NAME' => '/advanced/backend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site\\upload'
+    'PATH_TRANSLATED' => 'D:/phpstudy_pro/WWW'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => 'D:/phpstudy_pro/WWW/advanced/backend/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639063268.473
+    'REQUEST_TIME' => 1639063268
+]
+2021-12-09 23:21:17 [127.0.0.1][-][b4bq3i3hadtl3uclpdqs6pr5pf][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site\upload". in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site\\upload', Array)
+#1 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpstudy_pro\WWW\advanced\backend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\phpstudy_pro\WWW\advanced\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2021-12-09 23:21:17 [127.0.0.1][-][b4bq3i3hadtl3uclpdqs6pr5pf][info][application] $_GET = [
+    'r' => 'site\\upload'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'themeName' => 'blue'
+    'advanced-backend' => 'b4bq3i3hadtl3uclpdqs6pr5pf'
+    '_csrf-backend' => 'a41b633e314e46052a9081fd98d7296bd1767ee90a2fd446cacb87211a1bf8faa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"cfQtmYkoWKKB8KAesv3AgQ42gJpEKllS\";}'
+    '_csrf' => 'b78b293f3b5325538490d993f6465b26063e09a02631ecdd9270ed5493937287a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eQs0sSzuqiKEUhQHmNQod-TXJqOvRCNU\";}'
+    'PHPSESSID' => 'tjt4cc8bhq0of0064tch7ih2ao'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://127.0.0.1/advanced/backend/web/index.php?r=site%2Findex'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\root\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-J9D5JK1'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'GOPATH' => 'D:\\Goproject'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\root'
+    'LOCALAPPDATA' => 'C:\\Users\\root\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-J9D5JK1'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OneDrive' => 'C:\\Users\\root\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'D:\\Program Files (x86)\\NetSarang\\Xshell 6\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\Program Files\\TortoiseSVN\\bin;D:\\phpstudy_pro\\Extensions\\php\\php7.3.4nts;D:\\Program Files (x86)\\NetSarang\\Xftp 7\\;D:\\Program Files\\Git\\cmd;D:\\Program Files\\Go\\bin;D:\\Program Files (x86)\\NetSarang\\Xshell7\\;C:\\Users\\root\\AppData\\Local\\Microsoft\\WindowsApps;D:\\office\\Microsoft VS Code\\bin;C:\\Program Files\\JetBrains\\PhpStorm 2020.2.4\\bin;C:\\Users\\root\\go\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PhpStorm' => 'C:\\Program Files\\JetBrains\\PhpStorm 2020.2.4\\bin;'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 11, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e0b'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\root\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\root\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-J9D5JK1'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-J9D5JK1'
+    'USERNAME' => 'root'
+    'USERPROFILE' => 'C:\\Users\\root'
+    'windir' => 'C:\\WINDOWS'
+    'WXDRIVE_START_ARGS' => '--wxdrive-setting=0 --disable-gpu --disable-software-rasterizer --enable-features=NetworkServiceInProcess'
+    'ZES_ENABLE_SYSMAN' => '1'
+    'HTTP_COOKIE' => 'themeName=blue; advanced-backend=b4bq3i3hadtl3uclpdqs6pr5pf; _csrf-backend=a41b633e314e46052a9081fd98d7296bd1767ee90a2fd446cacb87211a1bf8faa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22cfQtmYkoWKKB8KAesv3AgQ42gJpEKllS%22%3B%7D; _csrf=b78b293f3b5325538490d993f6465b26063e09a02631ecdd9270ed5493937287a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eQs0sSzuqiKEUhQHmNQod-TXJqOvRCNU%22%3B%7D; PHPSESSID=tjt4cc8bhq0of0064tch7ih2ao'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"96\", \"Google Chrome\";v=\"96\"'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '64562'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.15.11'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpstudy_pro/WWW'
+    'DOCUMENT_URI' => '/advanced/backend/web/index.php'
+    'REQUEST_URI' => '/advanced/backend/web/index.php?r=site\\upload'
+    'SCRIPT_NAME' => '/advanced/backend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site\\upload'
+    'PATH_TRANSLATED' => 'D:/phpstudy_pro/WWW'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => 'D:/phpstudy_pro/WWW/advanced/backend/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639063277.5414
+    'REQUEST_TIME' => 1639063277
+]
+2021-12-09 23:21:19 [127.0.0.1][-][b4bq3i3hadtl3uclpdqs6pr5pf][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site\upload". in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site\\upload', Array)
+#1 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpstudy_pro\WWW\advanced\backend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\phpstudy_pro\WWW\advanced\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2021-12-09 23:21:18 [127.0.0.1][-][b4bq3i3hadtl3uclpdqs6pr5pf][info][application] $_GET = [
+    'r' => 'site\\upload'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'themeName' => 'blue'
+    'advanced-backend' => 'b4bq3i3hadtl3uclpdqs6pr5pf'
+    '_csrf-backend' => 'a41b633e314e46052a9081fd98d7296bd1767ee90a2fd446cacb87211a1bf8faa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"cfQtmYkoWKKB8KAesv3AgQ42gJpEKllS\";}'
+    '_csrf' => 'b78b293f3b5325538490d993f6465b26063e09a02631ecdd9270ed5493937287a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eQs0sSzuqiKEUhQHmNQod-TXJqOvRCNU\";}'
+    'PHPSESSID' => 'tjt4cc8bhq0of0064tch7ih2ao'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://127.0.0.1/advanced/backend/web/index.php?r=site%2Findex'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\root\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-J9D5JK1'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'GOPATH' => 'D:\\Goproject'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\root'
+    'LOCALAPPDATA' => 'C:\\Users\\root\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-J9D5JK1'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OneDrive' => 'C:\\Users\\root\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'D:\\Program Files (x86)\\NetSarang\\Xshell 6\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\Program Files\\TortoiseSVN\\bin;D:\\phpstudy_pro\\Extensions\\php\\php7.3.4nts;D:\\Program Files (x86)\\NetSarang\\Xftp 7\\;D:\\Program Files\\Git\\cmd;D:\\Program Files\\Go\\bin;D:\\Program Files (x86)\\NetSarang\\Xshell7\\;C:\\Users\\root\\AppData\\Local\\Microsoft\\WindowsApps;D:\\office\\Microsoft VS Code\\bin;C:\\Program Files\\JetBrains\\PhpStorm 2020.2.4\\bin;C:\\Users\\root\\go\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PhpStorm' => 'C:\\Program Files\\JetBrains\\PhpStorm 2020.2.4\\bin;'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 11, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e0b'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\root\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\root\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-J9D5JK1'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-J9D5JK1'
+    'USERNAME' => 'root'
+    'USERPROFILE' => 'C:\\Users\\root'
+    'windir' => 'C:\\WINDOWS'
+    'WXDRIVE_START_ARGS' => '--wxdrive-setting=0 --disable-gpu --disable-software-rasterizer --enable-features=NetworkServiceInProcess'
+    'ZES_ENABLE_SYSMAN' => '1'
+    'HTTP_COOKIE' => 'themeName=blue; advanced-backend=b4bq3i3hadtl3uclpdqs6pr5pf; _csrf-backend=a41b633e314e46052a9081fd98d7296bd1767ee90a2fd446cacb87211a1bf8faa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22cfQtmYkoWKKB8KAesv3AgQ42gJpEKllS%22%3B%7D; _csrf=b78b293f3b5325538490d993f6465b26063e09a02631ecdd9270ed5493937287a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eQs0sSzuqiKEUhQHmNQod-TXJqOvRCNU%22%3B%7D; PHPSESSID=tjt4cc8bhq0of0064tch7ih2ao'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"96\", \"Google Chrome\";v=\"96\"'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '65326'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.15.11'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpstudy_pro/WWW'
+    'DOCUMENT_URI' => '/advanced/backend/web/index.php'
+    'REQUEST_URI' => '/advanced/backend/web/index.php?r=site\\upload'
+    'SCRIPT_NAME' => '/advanced/backend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site\\upload'
+    'PATH_TRANSLATED' => 'D:/phpstudy_pro/WWW'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => 'D:/phpstudy_pro/WWW/advanced/backend/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639063278.6605
+    'REQUEST_TIME' => 1639063278
+]
+2021-12-09 23:21:42 [127.0.0.1][-][b4bq3i3hadtl3uclpdqs6pr5pf][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site\up". in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site\\up', Array)
+#1 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpstudy_pro\WWW\advanced\backend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\phpstudy_pro\WWW\advanced\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2021-12-09 23:21:42 [127.0.0.1][-][b4bq3i3hadtl3uclpdqs6pr5pf][info][application] $_GET = [
+    'r' => 'site\\up'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'themeName' => 'blue'
+    'advanced-backend' => 'b4bq3i3hadtl3uclpdqs6pr5pf'
+    '_csrf-backend' => 'a41b633e314e46052a9081fd98d7296bd1767ee90a2fd446cacb87211a1bf8faa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"cfQtmYkoWKKB8KAesv3AgQ42gJpEKllS\";}'
+    '_csrf' => 'b78b293f3b5325538490d993f6465b26063e09a02631ecdd9270ed5493937287a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eQs0sSzuqiKEUhQHmNQod-TXJqOvRCNU\";}'
+    'PHPSESSID' => 'tjt4cc8bhq0of0064tch7ih2ao'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://127.0.0.1/advanced/backend/web/index.php?r=site%2Findex'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\root\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-J9D5JK1'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'GOPATH' => 'D:\\Goproject'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\root'
+    'LOCALAPPDATA' => 'C:\\Users\\root\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-J9D5JK1'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OneDrive' => 'C:\\Users\\root\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'D:\\Program Files (x86)\\NetSarang\\Xshell 6\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\Program Files\\TortoiseSVN\\bin;D:\\phpstudy_pro\\Extensions\\php\\php7.3.4nts;D:\\Program Files (x86)\\NetSarang\\Xftp 7\\;D:\\Program Files\\Git\\cmd;D:\\Program Files\\Go\\bin;D:\\Program Files (x86)\\NetSarang\\Xshell7\\;C:\\Users\\root\\AppData\\Local\\Microsoft\\WindowsApps;D:\\office\\Microsoft VS Code\\bin;C:\\Program Files\\JetBrains\\PhpStorm 2020.2.4\\bin;C:\\Users\\root\\go\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PhpStorm' => 'C:\\Program Files\\JetBrains\\PhpStorm 2020.2.4\\bin;'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 11, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e0b'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\root\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\root\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-J9D5JK1'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-J9D5JK1'
+    'USERNAME' => 'root'
+    'USERPROFILE' => 'C:\\Users\\root'
+    'windir' => 'C:\\WINDOWS'
+    'WXDRIVE_START_ARGS' => '--wxdrive-setting=0 --disable-gpu --disable-software-rasterizer --enable-features=NetworkServiceInProcess'
+    'ZES_ENABLE_SYSMAN' => '1'
+    'HTTP_COOKIE' => 'themeName=blue; advanced-backend=b4bq3i3hadtl3uclpdqs6pr5pf; _csrf-backend=a41b633e314e46052a9081fd98d7296bd1767ee90a2fd446cacb87211a1bf8faa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22cfQtmYkoWKKB8KAesv3AgQ42gJpEKllS%22%3B%7D; _csrf=b78b293f3b5325538490d993f6465b26063e09a02631ecdd9270ed5493937287a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eQs0sSzuqiKEUhQHmNQod-TXJqOvRCNU%22%3B%7D; PHPSESSID=tjt4cc8bhq0of0064tch7ih2ao'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"96\", \"Google Chrome\";v=\"96\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '64562'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.15.11'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpstudy_pro/WWW'
+    'DOCUMENT_URI' => '/advanced/backend/web/index.php'
+    'REQUEST_URI' => '/advanced/backend/web/index.php?r=site\\up'
+    'SCRIPT_NAME' => '/advanced/backend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site\\up'
+    'PATH_TRANSLATED' => 'D:/phpstudy_pro/WWW'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => 'D:/phpstudy_pro/WWW/advanced/backend/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639063301.8484
+    'REQUEST_TIME' => 1639063301
+]
+2021-12-09 23:21:56 [127.0.0.1][-][b4bq3i3hadtl3uclpdqs6pr5pf][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site\asd". in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site\\asd', Array)
+#1 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpstudy_pro\WWW\advanced\backend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\phpstudy_pro\WWW\advanced\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2021-12-09 23:21:56 [127.0.0.1][-][b4bq3i3hadtl3uclpdqs6pr5pf][info][application] $_GET = [
+    'r' => 'site\\asd'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'themeName' => 'blue'
+    'advanced-backend' => 'b4bq3i3hadtl3uclpdqs6pr5pf'
+    '_csrf-backend' => 'a41b633e314e46052a9081fd98d7296bd1767ee90a2fd446cacb87211a1bf8faa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"cfQtmYkoWKKB8KAesv3AgQ42gJpEKllS\";}'
+    '_csrf' => 'b78b293f3b5325538490d993f6465b26063e09a02631ecdd9270ed5493937287a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eQs0sSzuqiKEUhQHmNQod-TXJqOvRCNU\";}'
+    'PHPSESSID' => 'tjt4cc8bhq0of0064tch7ih2ao'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://127.0.0.1/advanced/backend/web/index.php?r=site%2Findex'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\root\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-J9D5JK1'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'GOPATH' => 'D:\\Goproject'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\root'
+    'LOCALAPPDATA' => 'C:\\Users\\root\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-J9D5JK1'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OneDrive' => 'C:\\Users\\root\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'D:\\Program Files (x86)\\NetSarang\\Xshell 6\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\Program Files\\TortoiseSVN\\bin;D:\\phpstudy_pro\\Extensions\\php\\php7.3.4nts;D:\\Program Files (x86)\\NetSarang\\Xftp 7\\;D:\\Program Files\\Git\\cmd;D:\\Program Files\\Go\\bin;D:\\Program Files (x86)\\NetSarang\\Xshell7\\;C:\\Users\\root\\AppData\\Local\\Microsoft\\WindowsApps;D:\\office\\Microsoft VS Code\\bin;C:\\Program Files\\JetBrains\\PhpStorm 2020.2.4\\bin;C:\\Users\\root\\go\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PhpStorm' => 'C:\\Program Files\\JetBrains\\PhpStorm 2020.2.4\\bin;'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 11, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e0b'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\root\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\root\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-J9D5JK1'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-J9D5JK1'
+    'USERNAME' => 'root'
+    'USERPROFILE' => 'C:\\Users\\root'
+    'windir' => 'C:\\WINDOWS'
+    'WXDRIVE_START_ARGS' => '--wxdrive-setting=0 --disable-gpu --disable-software-rasterizer --enable-features=NetworkServiceInProcess'
+    'ZES_ENABLE_SYSMAN' => '1'
+    'HTTP_COOKIE' => 'themeName=blue; advanced-backend=b4bq3i3hadtl3uclpdqs6pr5pf; _csrf-backend=a41b633e314e46052a9081fd98d7296bd1767ee90a2fd446cacb87211a1bf8faa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22cfQtmYkoWKKB8KAesv3AgQ42gJpEKllS%22%3B%7D; _csrf=b78b293f3b5325538490d993f6465b26063e09a02631ecdd9270ed5493937287a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eQs0sSzuqiKEUhQHmNQod-TXJqOvRCNU%22%3B%7D; PHPSESSID=tjt4cc8bhq0of0064tch7ih2ao'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"96\", \"Google Chrome\";v=\"96\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '64562'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.15.11'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpstudy_pro/WWW'
+    'DOCUMENT_URI' => '/advanced/backend/web/index.php'
+    'REQUEST_URI' => '/advanced/backend/web/index.php?r=site\\asd'
+    'SCRIPT_NAME' => '/advanced/backend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site\\asd'
+    'PATH_TRANSLATED' => 'D:/phpstudy_pro/WWW'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => 'D:/phpstudy_pro/WWW/advanced/backend/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639063316.3125
+    'REQUEST_TIME' => 1639063316
+]
+2021-12-09 23:24:22 [127.0.0.1][-][b4bq3i3hadtl3uclpdqs6pr5pf][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/asd in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Controller.php:128
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('asd', Array)
+#1 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/asd', Array)
+#2 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\phpstudy_pro\WWW\advanced\backend\web\index.php(17): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\phpstudy_pro\WWW\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\phpstudy_pro\WWW\advanced\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2021-12-09 23:24:21 [127.0.0.1][-][b4bq3i3hadtl3uclpdqs6pr5pf][info][application] $_GET = [
+    'r' => 'site/asd'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'themeName' => 'blue'
+    'advanced-backend' => 'b4bq3i3hadtl3uclpdqs6pr5pf'
+    '_csrf-backend' => 'a41b633e314e46052a9081fd98d7296bd1767ee90a2fd446cacb87211a1bf8faa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"cfQtmYkoWKKB8KAesv3AgQ42gJpEKllS\";}'
+    '_csrf' => 'b78b293f3b5325538490d993f6465b26063e09a02631ecdd9270ed5493937287a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eQs0sSzuqiKEUhQHmNQod-TXJqOvRCNU\";}'
+    'PHPSESSID' => 'tjt4cc8bhq0of0064tch7ih2ao'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://127.0.0.1/advanced/backend/web/index.php?r=site%2Flogin'
+]
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\root\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'DESKTOP-J9D5JK1'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'GOPATH' => 'D:\\Goproject'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\root'
+    'LOCALAPPDATA' => 'C:\\Users\\root\\AppData\\Local'
+    'LOGONSERVER' => '\\\\DESKTOP-J9D5JK1'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OneDrive' => 'C:\\Users\\root\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'D:\\Program Files (x86)\\NetSarang\\Xshell 6\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;D:\\Program Files\\TortoiseSVN\\bin;D:\\phpstudy_pro\\Extensions\\php\\php7.3.4nts;D:\\Program Files (x86)\\NetSarang\\Xftp 7\\;D:\\Program Files\\Git\\cmd;D:\\Program Files\\Go\\bin;D:\\Program Files (x86)\\NetSarang\\Xshell7\\;C:\\Users\\root\\AppData\\Local\\Microsoft\\WindowsApps;D:\\office\\Microsoft VS Code\\bin;C:\\Program Files\\JetBrains\\PhpStorm 2020.2.4\\bin;C:\\Users\\root\\go\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PhpStorm' => 'C:\\Program Files\\JetBrains\\PhpStorm 2020.2.4\\bin;'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 11, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e0b'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\root\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\root\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'DESKTOP-J9D5JK1'
+    'USERDOMAIN_ROAMINGPROFILE' => 'DESKTOP-J9D5JK1'
+    'USERNAME' => 'root'
+    'USERPROFILE' => 'C:\\Users\\root'
+    'windir' => 'C:\\WINDOWS'
+    'WXDRIVE_START_ARGS' => '--wxdrive-setting=0 --disable-gpu --disable-software-rasterizer --enable-features=NetworkServiceInProcess'
+    'ZES_ENABLE_SYSMAN' => '1'
+    'HTTP_COOKIE' => 'themeName=blue; advanced-backend=b4bq3i3hadtl3uclpdqs6pr5pf; _csrf-backend=a41b633e314e46052a9081fd98d7296bd1767ee90a2fd446cacb87211a1bf8faa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22cfQtmYkoWKKB8KAesv3AgQ42gJpEKllS%22%3B%7D; _csrf=b78b293f3b5325538490d993f6465b26063e09a02631ecdd9270ed5493937287a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eQs0sSzuqiKEUhQHmNQod-TXJqOvRCNU%22%3B%7D; PHPSESSID=tjt4cc8bhq0of0064tch7ih2ao'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"96\", \"Google Chrome\";v=\"96\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '64562'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.15.11'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => 'D:/phpstudy_pro/WWW'
+    'DOCUMENT_URI' => '/advanced/backend/web/index.php'
+    'REQUEST_URI' => '/advanced/backend/web/index.php?r=site/asd'
+    'SCRIPT_NAME' => '/advanced/backend/web/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/asd'
+    'PATH_TRANSLATED' => 'D:/phpstudy_pro/WWW'
+    'PATH_INFO' => ''
+    'SCRIPT_FILENAME' => 'D:/phpstudy_pro/WWW/advanced/backend/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1639063461.5952
+    'REQUEST_TIME' => 1639063461
+]
